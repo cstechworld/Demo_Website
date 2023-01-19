@@ -1,0 +1,270 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            body{
+                margin: 0;padding: 0;
+            }
+            .box{
+                height: 50px;
+                width: auto;
+                float: left;
+                /* background-color: aquamarine; */
+            }
+            .box button{
+                height: 50px;
+                width: auto;
+                padding: 0 20px;
+                border: none;
+                outline: none;
+                box-sizing: border-box;
+                background-color: rgb(191, 184, 184);
+                color: white;
+                float: left;
+                font-weight: 900;
+                font-size: 30px;
+            }
+            .btn{
+                height: 50px;
+                width: auto;
+                padding: 0 20px;
+                background-color: brown;
+                color: white;
+                border: none;
+                outline: none;
+                margin-left: 20px;
+                cursor: pointer;
+            }
+            .box input[type="text"]{
+                width: 150px;
+                height: 50px;
+                margin: 0;padding: 0;
+                float: left;
+                border: none;
+                outline: none;
+                font-size: 25px;
+                background-color: rgb(215, 221, 221);
+                border-top: 1px solid gray;
+                border-bottom: 1px solid gray;
+                box-sizing: border-box;
+                text-align: center;
+            }
+            button#b1{
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+                transition: 0.5s;
+            }
+            button#b2{
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 10px;
+                transition: 0.5s;
+            }
+            button#b1:hover,button#b2:hover{
+                background-color: black;
+                color: white;
+                cursor: pointer;
+            }
+            .boxx{
+                height: 50px;
+                width: 50px;
+                background-color: brown;
+                float: left;
+                margin-top: 20px;
+                margin-left: 20px;
+                color: white;
+                text-align: center;
+                line-height: 45px;
+                font-size: 30px;
+            }
+            .main_phone{
+                height: auto;
+                width: 17%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                background-color: brown;
+                border-radius: 20px;
+            }
+            .top{
+                height: 40px;
+                width: 100%;
+                background-color: black;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+            }
+            .nodge{
+                height: 5px;
+                width: 20%;
+                position: absolute;
+                top: 25px;
+                left: 50%;
+                transform: translate(-50%);
+                background-color: rgb(91, 105, 105);
+                border-radius: 5px;
+                color: white;
+            }
+            .camera{
+                height: 10px;
+                width: 10px;
+                position: absolute;
+                top: 8px;
+                left: 50%;
+                transform: translate(-50%);
+                background-color: rgb(91, 105, 105);
+                border-radius: 50%;
+            }
+        
+            .screen{
+                height: 400px;
+                width: 100%;
+                background-color: antiquewhite;
+                background-image: url('images/iphone_wallper.PNG');
+                background-repeat: no-repeat;
+                background-size:100% 100%;
+                
+            }
+            .inner-screen{
+                height: 395px;
+                width: 97%;
+                background-color: rgb(145, 119, 84);
+                margin-left: 4px;
+                margin-top: 3px;
+                float: left;
+               
+            }
+            .bottom{
+                height: 50px;
+                width: 100%;
+                background-color: rgb(0, 0, 0);
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+            }
+            .bottom_finger{
+                height: 40px;
+                width: 40px;
+                border-radius: 50%;
+                position: absolute;
+                left: 50%;
+                bottom: 5px;
+                transform: translate(-50%);
+                background-image: linear-gradient(rgb(0, 0, 0), rgb(126, 117, 117));
+               
+            }
+            .bottom_finger_inner{
+                height: 37px;
+                width: 37px;
+                border-radius: 50%;
+                position: absolute;
+                left: 50%;
+                bottom: 0px;
+                transform: translate(-50%);
+               background-color: black;
+            }
+           .bottom_finger_inner_box{
+                height: 13px;
+                width: 13px;
+                position: absolute;
+                bottom: 9%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                border: 1px solid rgb(82, 81, 81);
+           }
+           .bottom_finger_inner:hover .bottom_finger_inner_box{
+                border-color: rgb(141, 144, 148);
+                cursor: pointer;
+           }
+            
+            .rside_btn{
+                height: 30px;
+                width: 1px;
+                background-color: rgb(45, 73, 73);
+                position: absolute;
+                top: 30%;
+                left: 58.51%;
+            }
+            .lside_btn{
+                height: 30px;
+                width: 1px;
+                background-color: rgb(45, 73, 73);
+                position: absolute;
+                top: 30%;
+                left: 41.42%;
+            }
+            .down{
+                top:35%
+            }
+        </style>
+    </head>
+    <body id="main">
+        <div class="box">
+            <button id="b1" onclick="decrease()">-</button>
+            <input type="text" name="" id="value" />
+            <button id="b2" onclick="increase()">+</button>
+            
+        </div>
+        
+        <button class="btn" onclick="generate()">Create</button>
+
+        <div class="main_phone">
+            <div class="top">
+                <div class="camera"></div>
+                <div class="nodge"></div>
+            </div>
+            <div class="screen" usemap="#workmap">
+                <map name="workmap">
+                    <area shape="rect" coords="334,244,270,350" alt="Computer" href="computer.htm">
+                    <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+                    <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm">
+                  </map>
+            </div>
+           
+            <div class="bottom">
+                <div class="bottom_finger">
+                    <div class="bottom_finger_inner">
+                        <div class="bottom_finger_inner_box"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="lside_btn"></div>
+        <div class="lside_btn down"></div>
+        <div class="rside_btn"></div>
+
+        <script>
+            let i,n=0;
+            let num = document.getElementById("value");
+            function increase(){
+                    n++;
+                    num.value=n;
+            }
+            function decrease(){
+                if(n>0){
+                    n--;
+                    num.value=n;
+                }
+                return 0;
+                
+            }
+            function generate()
+            {
+                for(i=1;i<=n;i++)
+                {
+                    let elem = document.createElement("div");
+                    let text = document.createTextNode(i);
+                    
+                    elem.appendChild(text);
+                    elem.setAttribute("class","boxx");
+                    let body_elem = document.getElementById("main");
+                    body_elem.appendChild(elem);
+                }
+            }
+            
+        </script>
+    </body>
+    </html>

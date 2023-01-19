@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Css</title>
+    <style>
+        body {
+            counter-reset: section;
+            }
+            h2{
+                height:40px;
+                margin-top:20px;
+                line-height:40px;
+            }
+            h2::before {
+                counter-increment: section;
+                content:counter(section);
+                height:40px;
+                width:40px;
+                background-color:red;
+                color:white;
+                float:left;
+                border-radius:50%;
+                text-align:center;
+                line-height:40px;
+                margin-right:10px;
+            }
+        ::placeholder{
+            color: rgb(236, 231, 231);
+        }
+        input[type="text"],input[type="password"],select{
+            width: 400px;
+            height: 30px;
+            padding-left: 20px;
+            box-sizing: border-box;
+            margin-left: 20px;
+            /* background-color: rgb(89, 124, 113); */
+            border: none;
+            outline: none;
+            color: rgb(213, 70, 70);
+            font-weight: 500;
+            border-bottom: 1px solid #000;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <form>
+        <label for="fname">First Name</label>
+        <input type="text" name="fname" id="fname" placeholder="Enter First Name " /><br><br>
+        <label for="lname">Last Name</label>
+        <input type="text" name="lname" id="lname" placeholder="Enter Last Name " /><br><br>
+        <label for="pass">Password</label>
+        <input type="password" name="pass" id="pass" placeholder="Enter Password " /><br><br>
+        <label for="state">State</label>
+        <select name="state" id="state" style="margin-left: 50px;">
+            <option value="rajasthan">Rajasthan</option>
+            <option value="rajasthan">Rajasthan</option>
+            <option value="rajasthan">Rajasthan</option>
+            <option value="rajasthan">Rajasthan</option>
+            <option value="rajasthan">Rajasthan</option>
+        </select>
+    </form>
+
+    <h1>Using CSS Counters</h1>
+
+    <h2>HTML Tutorial</h2>
+    <h2>CSS Tutorial</h2>
+    <h2>JavaScript Tutorial</h2>
+    <h2>Python Tutorial</h2>
+    <h2>SQL Tutorial</h2>
+</body>
+</html>

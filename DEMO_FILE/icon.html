@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+        i{
+            font-size: 80px;
+        }
+        .service_box{
+            margin-top: 30px;
+            height: auto;
+            width: 300px;
+            float: left;
+            border-radius: 20px;
+            border-bottom: 4px solid #ccc;
+            box-sizing: border-box;
+        }
+        .service_box:hover{
+            border-bottom: 4px solid #FFD43B;
+        }
+        .top{
+            height: 100px;
+            width: 100%;
+            background-color: #FFD43B;
+            text-align: center;
+            padding-top: 20px;
+            float: left;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+        .service_box h3{
+            margin: 0;
+            margin-top: 20px;
+            margin-left: 25%;
+            float: left;
+        }
+        .service_box p{
+            text-align: justify;
+            float: left;
+            margin: 30px;
+        }
+        .brdr{
+            border-radius: 30px;
+        }
+        button{
+            height: 40px;
+            width: auto;
+            padding: 0 30px;
+            border:none;
+            outline: none;
+            cursor: pointer;
+            background-color: white;
+            /* border: 2px solid black; */
+            border-radius: 10px;
+            transition: all 0.25s ease;
+        }
+        button:hover{
+            /* border: 2px solid #3bc7ff; */
+            box-shadow: 0px 0px 10px #3bc7ff;
+        }
+        .main_anchors{
+            width: 50%;
+            height: 80px;
+            background-color: #3bc7ff;
+            /* margin-top: 20px; */
+            padding-left: 30px;
+            position: relative;
+            box-sizing: border-box;
+        }
+        .main_anchors a{
+            height: 40px;
+            width: auto;
+            display: inline-block;
+            text-decoration: none;
+            line-height: 40px;
+            background-color: #FFD43B;
+            padding: 0 20px;
+            font-weight: 600;
+            font-family:Arial, Helvetica, sans-serif;
+            margin-top: 20px;
+            margin-left: 10px;
+            border-radius: 25px;
+            border-radius: 25px;
+        }
+        /* .main_anchors a::after{
+            content: '';
+            height: 10px;
+            width: 10px;
+            display: inline-block;
+            margin-left: 5px;
+            margin-top: -5px;
+            border-bottom: 3px solid white;
+            border-left: 3px solid white;
+            box-sizing: border-box;
+            background-color: white;
+            transform: rotate(315deg);
+        } */
+        /* .main_anchors a::after{
+            content: '';
+            height: 10px;
+            width: 10px;
+            display: inline-block;
+            margin-left: 5px;
+            margin-top: -5px;
+            border-bottom: 3px solid white;
+            border-left: 3px solid white;
+            box-sizing: border-box;
+            background-color: white;
+            transform: rotate(315deg);
+        } */
+        #a1{
+            background-color: #282A35;
+            color: white;
+        }
+        #a1::after{
+            content: '';
+            height: 10px;
+            width: 10px;
+            display: inline-block;
+            margin-left: 5px;
+            margin-top: -5px;
+            border-bottom: 3px solid white;
+            border-left: 3px solid white;
+            border-top: 3px solid #282A35;
+            border-right: 3px solid #282A35;
+            box-sizing: border-box;
+            background-color: #282A35;
+            transform: rotate(315deg);
+        }
+        #a1:hover{
+            background-color: #616161;
+        }
+        #a2{
+            background-color: #FFC0C7;
+            color:black;
+        }
+        #a2:hover{
+            background-color: #ffb3bb;
+        }
+        #a3{
+            background-color: #FFF4A3;
+            color:black;
+        }
+        #a3:hover{
+            background-color: #fff080;
+        }
+        #a4{
+            background-color: #04AA6D;
+            color:white;
+            padding: 0 40px;
+        }
+        #a4:hover{
+            background-color: #059862;
+        }
+    </style>
+</head>
+<body id="main">
+    <div class="main_anchors">
+        <a href="" id="a1">Upgrade</a>
+        <a href="" id="a2">Get Certified</a>
+        <a href="" id="a3">Create website</a>
+        <a href="" id="a4">Login</a>
+    </div>
+    
+  <div class="service_box">
+    <div class="top">
+        <i class="fa-solid fa-cube"></i>
+    </div>
+    <h3>Commission an Icon</h3>
+    <p>Absolutely need an icon? Sponsor it and we'll design it for you and add it to Font Awesome.</p>
+  </div>
+  <br>
+  <div id="para_box">
+    <input type="text" name="element" id="elem">
+    <button onclick="create()">Create Paragraph</button>
+    <button onclick="change_css()">change css</button>
+    <button onclick="create_div()">New +</button>
+    <button onclick="openW3()">Open W3School</button>
+    <button onclick="goBack()">Go Back</button>
+    <p id="demo"></p>
+  </div>
+  <script>
+    const control = document.getElementById("elem");
+    function goBack() {
+        document.getElementById("demo").innerHTML = navigator.onLine;
+    }
+    function openW3(){
+        window.location.assign("https://www.w3schools.com")    
+    }
+    document.getElementById("demo").innerHTML = 
+"The full URL of this page is:<br>" + window.location.port;
+    function create_div()
+    {
+        const div1=document.createElement("div");
+        div1.style.height="300px";
+        div1.style.width="300px";
+        div1.style.backgroundColor="red";
+        div1.style.marginTop="300px";
+        div1.setAttribute("class","brdr");
+
+        const bod=document.getElementById("main");
+        bod.appendChild(div1);
+    }
+    function create()
+    {
+        const para1=document.createElement("p");
+        const para1_content=document.createTextNode("Absolutely need an icon? Sponsor it and we'll design it for you and add it to Font Awesome.");
+        para1.appendChild(para1_content);
+        para1.setAttribute("id","para");
+        const box=document.getElementById("para_box");
+        box.appendChild(para1);
+    }
+    function change_css(){
+        const change=document.getElementById("para");
+        change.style.color="red";
+        change.style.fontSize="30px"
+    }
+  </script>
+</body>
+</html>

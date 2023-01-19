@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;padding: 0;
+        }
+        .header{
+            height: 200px;
+            width: 80%;
+            left: 10%;
+            background-color: burlywood;
+            position: fixed;
+        }
+        .main{
+            height: 500px;
+            width: 80%;
+            left: 10%;
+            background-color: rgb(126, 81, 23);
+            position: relative;
+            top: 200px;
+        }
+        .box{
+            height: 450px;
+            width: 335px;
+            background-color: antiquewhite;
+            position: absolute;
+            left: 50px;
+            top: 25px;
+        }
+        .box ul{
+            position: relative;
+            top: 40px;
+            left: 32px;
+            list-style-type: none;
+            padding: 0;
+            width: 80%;
+        }
+        .box ul li{
+            margin: 0;padding: 0;
+        }
+        .box ul li a{
+            height: 40px;
+            width: auto;
+            padding: 0 0 0 20px;
+            display: block;
+            line-height: 35px;
+            text-decoration: none;
+            color: black;
+            font-weight: 600;
+            transition: 0.5s ;
+        }
+        .box ul li a:hover{
+            background-color: chocolate;
+            color: white;
+            border-radius: 10px;
+        }
+      
+        .box h2{
+            position: absolute;
+            left: 35%;
+        }
+        .box_img{
+            position: relative;
+            height: 100px;
+            width: 100px;
+            background-color: aqua;
+            top: 60px;
+            left: 35%;
+            /* cursor: url("images/img1.png") 1 1, pointer; */
+            cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 64 64'%3E%3Ctitle%3Ecursor-link%3C/title%3E%3Cg%3E%3Ccircle cx='32' cy='32' r='30' opacity='.8'%3E%3C/circle%3E%3Cpath d='M30.828 28.172l-.585-.586a2 2 0 0 1 0-2.828l6.171-6.171a2 2 0 0 1 2.828 0l6.171 6.171a2 2 0 0 1 0 2.828l-6.171 6.171a2 2 0 0 1-2.828 0l-.586-.585' fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'%3E%3C/path%3E%3Cpath d='M33.172 35.828l.585.586a2 2 0 0 1 0 2.828l-6.171 6.171a2 2 0 0 1-2.828 0l-6.171-6.171a2 2 0 0 1 0-2.828l6.171-6.171a2 2 0 0 1 2.828 0l.586.585' fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'%3E%3C/path%3E%3Cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M27 37l10-10'%3E%3C/path%3E%3C/g%3E%3C/svg%3E") 10 10, pointer;
+        }
+        .para_box{
+            height: 100px;
+            width: 200px;
+            padding: 0;
+            position: relative;
+            background-color: blue;
+            top: 80px;
+            left: 20%;
+        }
+        .para_box p{
+            color: white;
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            text-align: justify;
+        }
+        .logo{
+            height: 150px;
+            width: 150px;
+            background-color: black;
+            position: absolute;
+            top: 20px;
+            left: 70px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+
+        </div>
+    </div>
+    <div class="main">
+        <div class="box">
+            <h2>Welcome</h2>
+            <div class="box_img"></div>
+            <div class="para_box">
+                <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, soluta.</span></p>
+            </div>
+        </div>
+        <div class="box" style="left: 400px;">
+            <h2>Welcome</h2>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Search</a></li>
+            </ul>
+        </div>
+        <div class="box" style="left: 750px;"><h2>Welcome</h2></div>
+    </div>
+</body>
+</html>
